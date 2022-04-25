@@ -8,6 +8,8 @@ if (!customElements.get('product-form')) {
       this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
       this.cartNotification = document.querySelector('cart-notification');
       this.submitButton = this.querySelector('[type="submit"]');
+
+      this.submitButton.setAttribute('aria-describedby', 'a11y-modal-window-message');
     }
 
     onSubmitHandler(evt) {
